@@ -2,38 +2,74 @@
 <html lang = "en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/x-icon" href="./Assets/Images/Zack.jpg">
+        <link rel="icon" type="image/x-icon" href="./Assets/Images/Zack.jpeg">
+        
+        <link rel="stylesheet" href="./Assets/CSS/main.css">
+
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
         <title>Zack River</title>
     </head>
-    <body>
+    <body class="index-page">
+        <header id="header" class="header">
+            <div class="container">
+                <a class="logo" href="./index.html">
+                    <img src="./Assets/Images/zack.jpeg">
+                    <h1 class="site-name">Zack River</h1>
+                </a>
 
-        <hr />
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./resume.html">Resume</a>
-            <a href="./services.html">Services</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contact.html">Contact</a>
-        <hr />
-
-        <h1>
-            <a href="./index.html">Zack River</a>
-        </h1>
-        <a href="./index.html">
-            <img src="./Assets/Images/Zack.jpg" height="300">
-        </a>
-
-        <hr />
-
-        <p>
-            I am a Computer Science Student & Web Developer<br />
-            who is obsessed with Programming, Problem Solving<br />
-            and teaching others with the simplest funny way. 🤔</p>
-        
-        <hr />
-        
-
-
+                <nav class="navmenu">
+                    <ul>
+                        <li><a href="./index.html" class="active">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./resume.html">Resume</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> 
+        <br /> 
+        <br /> 
+        <br /> 
+        <br /> 
+        <br /> 
+            
+        <section id="hero" class="hero section">
+            <img src="./Assets/Images/bg.png" id="background" alt="">
+            <div class="container" data-aos="zoom-out" data-aos-delay="100">
+              <h2>Abdallah Wageeh</h2>
+              <p>I'm a <span class="typed" data-typed-items="Developer,Freelancer,Gamer,Youtuber,Designer,">Developer</span><span class="typed-cursor typed-cursor--blink"></span></p>
+              
+              <div class="social-links">
+                <a href="https://x.com/lZack_Riverl" target="_blank" aria-label="Twitter profile of Abdallah Wageeh">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+      
+                <a href="https://www.facebook.com/lz.zackl" target="_blank" aria-label="Facebook profile of Abdallah Wageeh">
+                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+      
+                <a href="https://www.instagram.com/lzack_riverl/" target="_blank" aria-label="Instagram profile of Abdallah Wageeh">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+      
+                <a href="https://www.linkedin.com/in/labdallah-wageehl/" target="_blank" aria-label="Linkedin profile of Abdallah Wageeh">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+      
+                <a href="https://www.youtube.com/@lZack.Riverl" target="_blank" aria-label="Youtube profile of Abdallah Wageeh">
+                  <i class="bi bi-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+      
+            </div>
+      
+          </section>    
+<!-- 
         <h2>Zack River</h2>
         <h3>Computer Science Student & FullStack Developer </h3>
 
@@ -42,11 +78,21 @@
         <a href="https://www.linkedin.com/in/labdallah-wageehl/">Linkedin</a>
         <a href="https://github.com/Zack-River">Github</a>
 
-        <hr />
+        <hr /> -->
 
-        <footer>
-            <p>Copyright <b>Zack River</b> All Rights Reserved</p>
-            <p>Designed by <a href="./index.html">Zack River</a></p>
-        </footer>
+        <footer id="footer" class="footer dark-background">
+            <div class="container">
+              <h3 class="sitename">Zack River</h3>
+              <p>FullStack Developer.</p>
+              <div class="container">
+                <div class="copyright">
+                  <span>Copyright</span> <strong class="px-1 sitename">Zack River</strong> <span>All Rights Reserved</span>
+                </div>
+                <div class="credits">
+                  Designed by <a href="./index.html">Zack River</a>
+                </div>
+              </div>
+            </div>
+          </footer>
     </body>
 </html>
