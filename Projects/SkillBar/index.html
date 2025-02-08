@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBar</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .skill-section {
+            margin: 20px 0 20px 0;
+        }
+
+        .title {
+            margin-left: 8%;
+            margin-right: 8%;
+            height: 100px;
+        }
+
+        .title h2 {
+            color: color(srgb 0.980392 0.980392 0.980392 / 0.5);
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .title h2::after {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 1px;
+        background-color: rgb(24, 133, 210);
+        margin-bottom: 3px; 
+        margin-left: 10px;
+        }
+
+        .title h3 {
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skill-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col {
+            width: 40%;
+            margin: 10px;
+        }
+
+        .skill {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            transition: 0.5s ease-in-out;
+        }
+
+        .skill-name , .mastery {
+            margin-bottom: 8px;
+            font-size: 10px;
+            font-weight: 200;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+        }
+        
+        .bar {
+            background-color: color(srgb 0.980392 0.980392 0.980392 / 0.1);
+            width: 100%;
+            height: 10px;
+            border-radius: 20px;
+        }
+
+        .percent {
+            background-color: rgb(24, 133, 210);
+            height: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="skill-section">
+        <div class="title">
+            <h2>SKILLS</h2>
+            <h3>MY SKILLS</h3>
+        </div>
+
+        <div class="skill-container">
+            <div class="col">
+                <div class="skill">
+                    <div class="skill-info">
+                        <p class="skill-name">HTML</p>
+                        <p class="mastery">85%</p>
+                    </div>
+                    <div class="bar">
+                        <div class="percent" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <div class="skill-info">
+                        <p class="skill-name">CSS</p>
+                        <p class="mastery">90%</p>
+                    </div>
+                    <div class="bar">
+                        <div class="percent" style="width: 90%"></div>
+                    </div>
+                </div>
+    
+                <div class="skill">
+                    <div class="skill-info">
+                        <p class="skill-name">BOOTSTRAP</p>
+                        <p class="mastery">85%</p>
+                    </div>
+                    <div class="bar">
+                        <div class="percent" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col">
+                <div class="skill">
+                    <div class="skill-info">
+                        <p class="skill-name">JAVASCRIPT</p>
+                        <p class="mastery">75%</p>
+                    </div>
+                    <div class="bar">
+                        <div class="percent" style="width: 75%"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <div class="skill-info">
+                        <p class="skill-name">C#</p>
+                        <p class="mastery">80%</p>
+                    </div>
+                    <div class="bar">
+                        <div class="percent" style="width: 80%"></div>
+                    </div>
+                </div>
+    
+                <div class="skill">
+                    <div class="skill-info">
+                        <p class="skill-name">POSTGRE SQL</p>
+                        <p class="mastery">90%</p>
+                    </div>
+                    <div class="bar">
+                        <div class="percent" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
