@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without Bootstrap</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            flex-grow: 1 1;
+            flex-direction: column;
+            width: 285px;
+            height: 405px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.176);
+            padding-bottom: 16px;
+        }
+
+        .card>img {
+            position: relative;
+            display: block;
+            inset:0;
+            width: 100%;
+            height: fit-content;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .content>h1 {
+            font-size: 20px;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 16px;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 300;
+            line-height: 24px;
+            color: rgb(33, 37, 41);
+        }
+        
+        .content button {
+            background-color: rgb(13, 110, 253);
+            border: 1px solid rgb(13, 110, 253);
+            padding: 11px 12px;
+            border-radius: 5px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./flower.jpg" alt="sun flower">
+            <div class="content">
+                <h1>Card title</h1>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <button>Go somewhere</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
