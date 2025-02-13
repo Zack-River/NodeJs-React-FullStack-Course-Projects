@@ -1,0 +1,375 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    max-width: 100vw;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    z-index: 997;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+p {
+    font-family: "Signika Negative";
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu {
+    padding-left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navmenu .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navmenu .logo img {
+    height: 40px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.navmenu .logo h1 {
+    font-size: 30px;
+    font-family: "Signika Negative";
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu .tabs ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    font-size: 20px;
+    font-family: "Signika Negative";
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs ul li {
+    transition: color 0.5s ease-in-out;
+}
+
+.navmenu .tabs ul li:hover {
+    color: #7258d1;
+    transition: color 0.2s ease-in-out;
+}
+
+svg {
+    display: none;
+}
+
+main {
+    position: relative;
+    background-color: #433878;
+    width: 100vw;
+    color: white;
+}
+
+.pfp {
+    background-color: black;
+    height: 50%;
+    border-radius: 50%;
+    border: 10px solid white;
+  }
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit:cover;
+}
+
+main, .section, .bg img {
+    max-width: 100%;
+}
+
+.main-container {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 13%;   
+    color: white;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.527);
+    padding: 10px 20px;
+    padding-bottom: 10vh;
+    border-radius: 50px;
+}
+
+.space-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20%;
+    padding: 0 5%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+
+.content h1 , h2 {
+    font-family: "Marck Script";
+    padding: 0;
+    margin: 0;
+}
+
+.content h1 {
+    font-weight: 800;
+    font-size: 6rem;
+    width: max-content;
+    word-spacing: -25px;
+    line-height: 60px;
+    padding: 5px 0;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+
+
+.content p {
+    font-size: 2.5rem;
+    padding-left: 10px;
+}
+
+.content .paragraph {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.pt2 {
+    text-decoration: underline;
+    text-decoration-color: #7258d1;
+}
+
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.icon img {
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
+.icon:hover {
+    background-color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+@media (max-width:1200px)
+{
+    .main-container {
+        width: 80%;
+        justify-content: space-between;
+        gap: 0;
+    }
+    
+    .pfp {
+        height: 40%;
+    }
+
+    .content h1 {
+        width: max-content;
+    }
+
+}
+
+@media (max-width:900px)
+{
+    .main-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .pfp {
+        width: 300px;
+        height: auto;
+    }
+
+    .content {
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .content h1 {
+        text-align: center;
+        width: max-content;
+        font-size: 4rem;
+        word-spacing: -20px;
+    }
+
+    .content h2 {
+        line-height: 30px;
+    }
+
+    .content p {
+        font-size: 2rem;
+        line-height: 10px;
+        padding-bottom: 35px;
+    }
+
+    .paragraph {
+        padding-bottom: 0;
+    }
+
+    .tabs ul li {
+        display: none;
+    }
+
+    svg {
+        position: fixed;
+        display: block;
+        top: 25px;
+        right: 10%;
+        transition: fill 0.2s ease-in-out;
+        z-index: 1000;
+    }
+
+    svg:hover {
+        fill: #7258d1;
+        transition: fill 0.2s ease-in-out;
+    }
+
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 8%;
+    align-items: center;
+    border-top: 20px solid #4338783c;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    max-width: 100vw;
+}
+
+.section .title {
+    width: 80vw;
+    padding-top: 5%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 4rem;
+
+}
+
+.section p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container > img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    font-family: "Signika Negative";
+}
+
+.right .sub-text {
+    padding-bottom: 20px;
+}
+
+.sub-text h3 {
+    font-size: 25px;
+    text-align: start;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-text p {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
+.right .grid {
+    width: 100%;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30px 30px 30px 30px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.col {
+    font-size: 20px;
+    font-weight: 300;
+    color: #7258d1;
+}
+.col a {
+    font-weight: 600;
+    color: white;
+}

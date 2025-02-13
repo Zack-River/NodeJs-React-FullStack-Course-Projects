@@ -4,278 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capstone 2</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Marck+Script&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        header {
-            position: fixed;
-            width: 100vw;
-            height: 80px;
-            z-index: 997;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-        }
-
-        .navmenu {
-            padding-left: 10%;
-            width: 80%;
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        .navmenu .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .navmenu .logo img {
-            height: 40px;
-            margin: 20px;
-            border-radius: 50%;
-        }
-
-        .navmenu .logo h1 {
-            font-size: 30px;
-            font-family: "Signika Negative";
-            font-weight: 800;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navmenu .tabs ul {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 10px;
-            font-size: 20px;
-            font-family: "Signika Negative";
-            font-weight: 400;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        .tabs ul li {
-            transition: color 0.5s ease-in-out;
-        }
-
-        .navmenu .tabs ul li:hover {
-            color: #7258d1;
-            transition: color 0.2s ease-in-out;
-        }
-
-        svg {
-            display: none;
-        }
-        
-        main {
-            position: relative;
-            background-color: #433878;
-            width: 100vw;
-            color: white;
-        }
-
-        .pfp {
-            background-color: black;
-            height: 50%;
-            border-radius: 50%;
-            border: 10px solid white;
-          }
-
-        .section {
-            position: relative;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        .bg {
-            width: 100vw;
-            height: 100vh;
-        }
-        
-        .bg img {
-            display: block;
-            width: 100vw;
-            height: 100vh;
-            object-fit:cover;
-        }
-
-        .container {
-            width: 80%;
-            height: 80%;
-            position: absolute;
-            top: 13%;
-            left: 5%;
-            color: white;
-            font-size: 2rem;
-            background: rgba(0, 0, 0, 0.527);
-            padding: 10px 20px;
-            padding-bottom: 10vh;
-            border-radius: 50px;
-        }
-
-        .space-evenly {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20%;
-            padding: 0 5%;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;;
-        }
-
-        .content h1 , h2 {
-            font-family: "Marck Script";
-            padding: 0;
-            margin: 0;
-        }
-
-        .content h1 {
-            font-weight: 800;
-            font-size: 6rem;
-            width: max-content;
-            line-height: 60px;
-            padding: 5px 0;
-        }
-
-        .content h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-            padding-left: 20px;
-        }
-
-
-
-        .content p {
-            font-size: 2.5rem;
-            font-family: "Signika Negative";
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-            padding-left: 10px;
-        }
-
-        .social-media {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-media .icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.4);
-            transition: background-color 0.2s ease-in-out;
-        }
-
-        .icon img {
-            width: 50%;
-            margin-left: 25%;
-            
-        }
-
-        .icon:hover {
-            background-color: white;
-            transition: background-color 0.2s ease-in-out;
-        }
-
-        @media (max-width:1200px)
-        {
-            .container {
-                width: 80%;
-                justify-content: space-between;
-                gap: 0;
-            }
-            
-            .pfp {
-                height: 40%;
-            }
-
-            .content h1 {
-                width: max-content;
-            }
-
-        }
-
-        @media (max-width:900px)
-        {
-            .container {
-                flex-direction: column-reverse;
-                justify-content: center;
-                align-items: center;
-                height: 80vh;
-                margin-top: 5vh;
-            }
-            .pfp {
-                width: 300px;
-                height: auto;
-            }
-
-            .content {
-                justify-content: center;
-                align-items: center;
-                margin-top: 20px;
-            }
-
-            .content h1 {
-                text-align: center;
-                width: max-content;
-                font-size: 4rem;
-                word-spacing: -20px;
-            }
-
-            .content h2 {
-                line-height: 30px;
-            }
-
-            .content p {
-                font-size: 2rem;
-                line-height: 10px;
-                padding-bottom: 35px;
-            }
-
-            .tabs ul li {
-                display: none;
-            }
-
-            svg {
-                position: fixed;
-                display: block;
-                top: 25px;
-                right: 10%;
-                transition: fill 0.2s ease-in-out;
-                z-index: 1000;
-            }
-
-            svg:hover {
-                fill: #7258d1;
-                transition: fill 0.2s ease-in-out;
-            }
-
-        }
-
-        section {
-            height: 100vh;
-            background-color: black;
-        }
-
-
-    </style>
 </head>
 <body>
 
@@ -287,7 +19,7 @@
             </div>
             <div class="tabs">
                 <ul>
-                    <li class="tab">Home</li>
+                    <li class="tab active">Home</li>
                     <li class="tab">About</li>
                     <li class="tab">Resume</li>
                     <li class="tab">Services</li>
@@ -298,12 +30,14 @@
         </nav>
     </header>
 
-    <main class="section">
-        <div class="container space-evenly">
+    <main class="main-section">
+        <div class="main-container space-evenly">
             <div class="content">
                 <h2>I am</h2>
                 <h1>Zack River</h1>
-                <p>Web Developer</p>
+                <div class="paragraph">
+                    <p class="pt1">Web</p><p class="pt2">Developer</p>
+                </div>
                 <div class="social-media">
                     <a href="#"><div class="icon"><img src="./assets/images/linkedin.svg" alt=""></a></div></a>
                     <a href="#"><div class="icon yt"><img src="./assets/images/youtube.svg" alt=""></a></div></a>
@@ -324,8 +58,51 @@
         </div>
     </main>
 
-    <section>
+    <section class="section about">
+        <div class="title">
+            <h2>About</h2>
+            <p>Hi! I'm Abdallah Wageeh, but you can call me Zack.<br>
+                I'm a Computer Science Student & FullStack Developer & Windows Application Developer.</p>
+        </div>
 
+        <div class="container">
+            <img src="./assets/images/zack.jpeg" alt="">
+            
+            <div class="right">
+                <div class="sub-text">
+                    <h3>Console APP Developer & Web Developer.</h3>
+                    <p>Egyptian Developer Who Love Coding.</p>
+                </div>
+
+                <ul class="grid">
+                    <li class="col">
+                        <a><a>Birthday:</a> 1st June 2004</a>
+                    </li>
+                    <li class="col">
+                        <a><a>Website:</a> lzackriverl.github.io</a>
+                    </li>
+                    <li class="col">
+                        <a><a>Phone:</a> +20 120 1024880</a>
+                    </li>
+                    <li class="col">
+                        <a><a>City:</a> Qalubiya, Egypt</a>
+                    </li>
+                            
+                    <li class="col">
+                        <a><a>Age:</a> 20</a>
+                    </li>
+                    <li class="col">
+                        <a><a>Degree:</a> Student</a>
+                    </li>
+                    <li class="col">
+                        <a><a>Email:</a> ZackRiver.Dev@gmail.com</a>
+                    </li>
+                    <li class="col">
+                        <a><a>City:</a> Available</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <footer>
