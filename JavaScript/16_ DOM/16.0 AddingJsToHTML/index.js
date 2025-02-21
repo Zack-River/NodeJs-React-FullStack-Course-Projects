@@ -1,1 +1,2 @@
-alert("Hello from external JS.");
+document.querySelector("h1").innerHTML = "Good Bye";
+document.querySelector("h1").style.color = "Purple";
