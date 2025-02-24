@@ -38,7 +38,7 @@ body {
     position: relative;
     z-index: 1;
     border-radius: 25px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Clear Background Inside Program */
