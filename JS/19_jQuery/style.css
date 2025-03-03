@@ -1,0 +1,15 @@
+.fancy {
+    font-size: 48px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.font-60{
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.font-100{
+    font-size: 100px;
+}
