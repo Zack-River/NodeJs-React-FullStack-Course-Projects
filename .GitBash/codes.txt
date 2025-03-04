@@ -10,3 +10,7 @@ code => open in vs code.
 start => open in notepad.
 cp => copy.
 mv => move.
+
+CMD Line BOOK:
+Learn Enough Command Line to Be Dangerous
+https://www.learnenough.com/command-line-tutorial
