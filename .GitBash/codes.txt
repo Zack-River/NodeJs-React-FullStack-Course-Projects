@@ -1,0 +1,12 @@
+sudo => with root / admin permission
+cd => change directory.
+rm => remove file.
+rm -rf => force remove folder or files.
+ls => show files without.
+ls -a => all files also hidden.
+mkdir => make folder.
+touch => make file.
+code => open in vs code.
+start => open in notepad.
+cp => copy.
+mv => move.
