@@ -1,0 +1,17 @@
+If you want the change to apply only inside Git Bash, modify your .bashrc file:
+
+Open Git Bash and type:
+nano ~/.bashrc
+
+Add the following line at the end:
+
+export PS1="\[\e[32m\]\u@\h \W$ \[\e[m\]"
+
+This makes your prompt green.
+Save the file (Ctrl + X, then Y, then Enter).
+Restart Git Bash inside VS Code.
+
+
+You can also change the entire theme by modifying the "terminal.integrated.theme" setting in VS Code:
+json:
+"terminal.integrated.theme": "dark"
