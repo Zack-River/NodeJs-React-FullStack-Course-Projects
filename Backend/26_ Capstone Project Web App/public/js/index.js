@@ -1,6 +1,6 @@
+// Search bar
 const searchBar = document.querySelector(".search-bar");
 const searchField= document.querySelector(".search");
-const createButton = document.querySelector(".create-btn");
 
 searchField.addEventListener("click", () => {
     searchBar.classList.add("expanded");
@@ -10,22 +10,6 @@ document.addEventListener("click", (event) => {
     if (!(event.target === searchBar) && !(event.target === searchField)) {
         searchBar.classList.remove("expanded");
     }
-});
-
-createButton.addEventListener("click" , () => {
-    window.location.href = "/create";
-});
-
-document.querySelectorAll(".close-btn").forEach(button => {
-    button.addEventListener("click", function() {
-        const postRemove = this.closest(".post"); // Find the parent .post div
-        if (postRemove) {
-            postRemove.remove();
-            if(!document.querySelector(".post")) {
-                document.querySelector("main").innerHTML = `<h1 class="no-more">No More Posts To View</h1>`;
-            }
-        }
-    });
 });
 
 document.querySelector(".search").addEventListener("input", (event) => {
@@ -41,4 +25,30 @@ document.querySelector(".search").addEventListener("input", (event) => {
             post.style.display = "none";
         }
     });
+});
+
+// Create Button
+const createButton = document.querySelector(".create-btn");
+
+createButton.addEventListener("click" , () => {
+    window.location.href = "/create";
+});
+
+// Close Button
+document.querySelectorAll(".close-btn").forEach(button => {
+    button.addEventListener("click", function() {
+        const postRemove = this.closest(".post");
+        if (postRemove) {
+            postRemove.remove();
+            if(!document.querySelector(".post")) {
+                document.querySelector("main").innerHTML = `<h1 class="no-more">No More Posts To View</h1>`;
+            }
+        }
+    });
+});
+
+// Back Button
+document.querySelector(".back-btn").addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = "/";
 });
