@@ -1,0 +1,17 @@
+{
+  "name": "26_-capstone-project-web-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zack River",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

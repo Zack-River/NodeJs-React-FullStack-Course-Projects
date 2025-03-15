@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <div class="create-post">
+        <div class="create-header">
+            <h1 class="create-title">Create Post</h1>
+        </div>
+        <div class="create-body">
+            <form class="post-form" action="/create" method="post">
+                <input type="text" placeholder="Post Name" class="post-name" name="post-name" required>
+                <input type="text" placeholder="Author Name"  class="author-name" name="author-name" required>
+                <div class="textarea-wrapper">
+                    <textarea class="post-content" name="post-content" placeholder="Write Your Topic Here!" required></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="create-btn">Create</button>
+                    <button class="back-btn">Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<%- include("partials/footer.ejs") %>
