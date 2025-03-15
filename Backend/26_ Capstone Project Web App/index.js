@@ -10,13 +10,45 @@ const port = 3001;
 const _dirname = dirname(fileURLToPath(import.meta.url));
 const postsFolder = path.join(_dirname,"posts");
 
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  console.log(postsFolder)
-  res.render("index.ejs");
+  let posts = [];
+
+  fs.readdir(postsFolder, (err, files) => {
+      if (err) {
+          console.error(`Error reading folder: ${err}`);
+          return res.status(500).send("Error reading posts directory");
+      }
+
+      const fileReadPromises = files.map(file => {
+          const filePath = path.join(postsFolder, file);
+
+          return fs.promises.readFile(filePath, 'utf8')
+              .then(data => {
+                  const lines = data.split('\n');
+                  return {
+                      name: lines[0] || "Untitled",
+                      author: lines[1] || "Unknown",
+                      content: lines.slice(2).join('\n') || "No content"
+                  };
+              })
+              .catch(error => {
+                  console.error(`Error reading file: ${file}`, error);
+                  return null;
+              });
+      });
+
+      Promise.all(fileReadPromises).then(results => {
+          posts = results.filter(post => post !== null);
+          console.log(posts);
+          res.render("index.ejs", { posts });
+      });
+  });
 });
+
 
 app.get("/posts", (req, res) => {
   res.render("posts.ejs");

@@ -139,78 +139,31 @@
             </div>
         </div>
 
-        <div class="post">
-            <div class="post-header">
-                <h2 class="title">Post 7</h2>
-                <div class="post-icons">
-                    <a href="/" class="fa-solid fa-pen-to-square edit-btn"></a>
-                    <a class="fa-solid fa-circle-xmark close-btn"></a>
+        <% posts.slice(0, 3).forEach(post => { %>
+            <div class="post">
+                <div class="post-header">
+                    <h2 class="title"><%= post.name %></h2>
+                    <h4 class="title"><%= post.author %></h4>
+                    <div class="post-icons">
+                        <a href="/" class="fa-solid fa-pen-to-square edit-btn"></a>
+                        <a class="fa-solid fa-circle-xmark close-btn"></a>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p class="post-content">
+                        <%
+                            let words = post.content.split(" ");
+                            let trimmedContent = words.slice(0, 70).join(" ");
+                            let finalContent = trimmedContent.length > 400 ? trimmedContent.substring(0, 400) + "..." : trimmedContent;
+                        %>
+                        <%= finalContent %>
+                    </p>
+                </div>
+                <div class="post-footer">
+                    <a href="/" class="show-more">Show More</a>
                 </div>
             </div>
-            <div class="post-body">
-                <p class="post-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vestibulum egestas feugiat. In eleifend luctus diam vel consequat.
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Nunc venenatis posuere diam, sed egestas neque convallis at. Nullam laoreet elementum imperdiet.
-                    Quisque sed laoreet diam. Vestibulum metus neque, porta quis purus eget, bibendum consequat orci.
-                    Sed suscipit rhoncus malesuada. 
-                    Fusce maximus magna non vulputate facilisis.
-                </p>
-            </div>
-            <div class="post-footer">
-                <a href="/" class="show-more">Show More</a>
-            </div>
-        </div>
-
-        <div class="post">
-            <div class="post-header">
-                <h2 class="title">Post 8</h2>
-                <div class="post-icons">
-                    <a href="/" class="fa-solid fa-pen-to-square edit-btn"></a>
-                    <a class="fa-solid fa-circle-xmark close-btn"></a>
-                </div>
-            </div>
-            <div class="post-body">
-                <p class="post-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vestibulum egestas feugiat. In eleifend luctus diam vel consequat.
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Nunc venenatis posuere diam, sed egestas neque convallis at. Nullam laoreet elementum imperdiet.
-                    Quisque sed laoreet diam. Vestibulum metus neque, porta quis purus eget, bibendum consequat orci.
-                    Sed suscipit rhoncus malesuada. 
-                    Fusce maximus magna non vulputate facilisis.
-                </p>
-            </div>
-            <div class="post-footer">
-                <a href="/" class="show-more">Show More</a>
-            </div>
-        </div>
-
-        <div class="post">
-            <div class="post-header">
-                <h2 class="title">Post 9</h2>
-                <div class="post-icons">
-                    <a href="/" class="fa-solid fa-pen-to-square edit-btn"></a>
-                    <a class="fa-solid fa-circle-xmark close-btn"></a>
-                </div>
-            </div>
-            <div class="post-body">
-                <p class="post-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vestibulum egestas feugiat. In eleifend luctus diam vel consequat.
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Nunc venenatis posuere diam, sed egestas neque convallis at. Nullam laoreet elementum imperdiet.
-                    Quisque sed laoreet diam. Vestibulum metus neque, porta quis purus eget, bibendum consequat orci.
-                    Sed suscipit rhoncus malesuada. 
-                    Fusce maximus magna non vulputate facilisis.
-                </p>
-            </div>
-            <div class="post-footer">
-                <a href="/" class="show-more">Show More</a>
-            </div>
-        </div>
-
+        <% }); %>
         
     </div>
 </main>
