@@ -1,0 +1,71 @@
+Repo Link:
+https://github.com/Zack-River/27_-Git-Github-and-Version-Control
+
+Learnt:
+KeyWords:
+Git
+Github
+ls -a
+git log
+git status
+git add file.txt
+git commit -m "message"
+q to cancel
+git diff file.txt
+git checkout file.txt
+Working area
+Staging area
+Local Repository
+Remote Repository
+echo "message" >> file.txt
+git branch -m main
+git remote add origin "link"
+git push -u origin main
+
+
+Notes:
+
+1- Git:
+Version Control System Where you turn every change/update into a version of project.
+
+2- git init:
+to initialize a git repo to Control all versions of project inside.
+
+3- ls -a:
+to show all files in folder even hidden ones.
+
+4- git status:
+to track all changes happened on project (working area) that not on staging area and their state.
+
+5- git add file.txt / .:
+move changes into changing file with their version to be ready to commit.
+
+6- git commit -m "message":
+make a commit for all changes in staging area.
+
+7-Working area:
+folder that you make changes in before it add to staging area and commited.
+
+8- Staging area:
+files updated are ready to get commited.
+
+9- Local Repository:
+Where All Commits Go as versions
+
+10- git diff file.txt / .:
+differ between current version of file and last one in staging area and commited.
+
+11- git checkout file.txt / .:
+to undo or rollback to the latest commited version (Stable and tested one).
+
+12- git branch -m main:
+change master branch name to main.
+
+13- git remote add origin "link":
+Adds a new remote repository with name origin to this link to host this repo online.
+
+14- git push -u origin main:
+git push => Pushes changes from your local repo to the remote repo.
+-u => Sets the upstream branch so that future git push and git pull commands work without specifying origin main.
+origin => The name of the remote repository (default is origin).
+main => The branch you are pushing (you can replace main with any branch name).
