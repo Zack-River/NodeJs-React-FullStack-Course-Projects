@@ -33,6 +33,8 @@ git merge branch-name
 git rebase branch-name
 git checkout -b branch-name
 git checkout commit-name
+Forking
+pull request
 
 
 Notes:
@@ -113,4 +115,8 @@ Create branch and Switch to.
 24- git checkout commit-name:
 to detach the head pointer from a branch name into a commit name to go to this specified commit witout affect branch.
 
-25-
+25- Forking:
+Taking a copy from a repo to your github account and access edit on it.
+
+26- pull request:
+request to repo owner to accept changes and pull it to update the main repo.
