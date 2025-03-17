@@ -21,6 +21,7 @@ echo "message" >> file.txt
 git branch -m main
 git remote add origin "link"
 git push -u origin main
+Main branch
 
 
 Notes:
@@ -69,3 +70,6 @@ git push => Pushes changes from your local repo to the remote repo.
 -u => Sets the upstream branch so that future git push and git pull commands work without specifying origin main.
 origin => The name of the remote repository (default is origin).
 main => The branch you are pushing (you can replace main with any branch name).
+
+15- Main branch:
+main timeline of commits.
