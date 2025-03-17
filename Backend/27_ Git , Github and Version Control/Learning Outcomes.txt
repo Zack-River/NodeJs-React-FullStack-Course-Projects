@@ -3,6 +3,7 @@ https://github.com/Zack-River/27_-Git-Github-and-Version-Control
 
 Learnt:
 KeyWords:
+
 Git
 Github
 ls -a
@@ -22,6 +23,16 @@ git branch -m main
 git remote add origin "link"
 git push -u origin main
 Main branch
+git rm --cached -r .
+.gitignore
+git clone "url"
+git branch name
+git branch
+git checkout branch-name
+git merge branch-name
+git rebase branch-name
+git checkout -b branch-name
+git checkout commit-name
 
 
 Notes:
@@ -65,7 +76,7 @@ change master branch name to main.
 13- git remote add origin "link":
 Adds a new remote repository with name origin to this link to host this repo online.
 
-14- git push -u origin main:
+14- git push origin main -u:
 git push => Pushes changes from your local repo to the remote repo.
 -u => Sets the upstream branch so that future git push and git pull commands work without specifying origin main.
 origin => The name of the remote repository (default is origin).
@@ -73,3 +84,33 @@ main => The branch you are pushing (you can replace main with any branch name).
 
 15- Main branch:
 main timeline of commits.
+
+16- .gitignore:
+File Where we write name of file and folders that you don't want to add to the git repository.
+it will be only on working area and not in staging area.
+
+17- git clone "url":
+cloning a remotely public hosted repository on your local machine to edit improve or fix this code.
+
+18- git branch name:
+To make new branch to edit on the same code on 2 paraller seperated versions
+
+19- git branch:
+to show all branches in this repo.
+
+20- git checkout branch-name:
+switch code version into this branch.
+
+21- git merge branch-name:
+done in main to merge all changes in branch with the main one.
+
+22- git rebase branch-name:
+to look like that that our latest commit in current branch happened sequentially after latest commit in the specified branch.
+
+23- git checkout -b branch-name:
+Create branch and Switch to.
+
+24- git checkout commit-name:
+to detach the head pointer from a branch name into a commit name to go to this specified commit witout affect branch.
+
+25-
