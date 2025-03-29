@@ -1,0 +1,16 @@
+<script>
+    const activeTab = document.querySelector('.active');
+    const tab  = document.querySelectorAll('.tab');
+    function activeLink() {
+        tab.forEach((item) => {
+            item.classList.remove('active');
+            this.classList.add('active');
+        });
+    }
+
+    tab.forEach((item) => {
+        item.addEventListener('click', activeLink)
+    });
+</script>
+</body>
+</html>
